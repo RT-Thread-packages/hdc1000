@@ -27,7 +27,7 @@ static rt_err_t _hdc1000_init(struct rt_sensor_intf *intf)
     return RT_EOK;
 }
 
-static rt_size_t hdc1000_fetch_data(struct rt_sensor_device *sensor, void *buf, rt_size_t len)
+static RT_SIZE_TYPE hdc1000_fetch_data(struct rt_sensor_device *sensor, void *buf, rt_size_t len)
 {
     struct rt_sensor_data *data = (struct rt_sensor_data *)buf;
     rt_uint16_t temp_value, humi_value;

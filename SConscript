@@ -4,8 +4,10 @@ Import('rtconfig')
 src   = []
 cwd   = GetCurrentDir()
 
+if GetDepend('PKG_HDC1000_USING_SENSOR_V1'):
+    src += ['sensor_ti_hdc1000.c']
+
 # add hdc1000 src files.
-src += Glob('sensor_ti_hdc1000.c')
 src += Glob('libraries/hdc1000_reg.c')
 
 # add Ethernet drivers.
